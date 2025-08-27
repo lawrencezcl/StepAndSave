@@ -1,0 +1,20 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
+
+const RedemptionPage: React.FC = () => {
+  const { bidId } = useParams<{ bidId: string }>();
+
+  return (
+    <div className="min-h-screen bg-gray-50 p-4">
+      <div className="max-w-md mx-auto">
+        <h1 className="text-2xl font-bold text-gray-900 mb-4">
+          Coupon Redemption
+        </h1>
+        <p className="text-gray-600">Bid ID: {bidId}</p>
+        <p className="text-gray-600">Redemption process coming soon...</p>
+      </div>
+    </div>
+  );
+};
+
+export default RedemptionPage;

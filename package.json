@@ -1,0 +1,46 @@
+{
+  "name": "step-and-save",
+  "version": "1.0.0",
+  "description": "Convert steps into instant spendable coupons - A Web3 loyalty engine on VERY Network",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "frontend",
+    "merchant-dashboard",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=frontend\" \"npm run dev --workspace=backend\"",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "deploy": "npm run deploy --workspace=contracts",
+    "lint": "npm run lint --workspaces",
+    "clean": "npm run clean --workspaces && rm -rf node_modules",
+    "setup": "npm install && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chenglinzhang/StepAndSave.git"
+  },
+  "keywords": [
+    "web3",
+    "nft",
+    "loyalty",
+    "fitness",
+    "very-network",
+    "step-tracking",
+    "coupons",
+    "dorahacks"
+  ],
+  "author": "Step-and-Save Team",
+  "license": "MIT"
+}
